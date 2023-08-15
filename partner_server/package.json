@@ -1,0 +1,15 @@
+{
+  "name": "partner_server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "NONE",
+  "scripts": {
+    "dev": "AWS_PROFILE=production serverless offline start --httpPort 3210 --lambdaPort 3211 --noPrependStageInUrl -s local --f koalafi_monthly",
+    "deploy-staging": "serverless deploy -s staging --aws-profile staging",
+    "deploy-testing": "serverless deploy -s testing --aws-profile testing"
+  },
+  "dependencies": {
+    "serverless-offline": "^12.0.4",
+    "stripe": "^12.17.0"
+  }
+}

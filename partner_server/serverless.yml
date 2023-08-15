@@ -1,0 +1,27 @@
+service: partner-server
+
+# You can pin your service to only deploy with a specific Serverless version
+# Check out our docs for more details
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  stage: ${opt:stage, "local"}
+  environment: ${file(env.yml):${opt:stage, self:provider.stage}}
+  deploymentBucket:
+    name: ${ssm(us-east-1):/GLOBAL/DEPLOYMENT_BUCKET}
+  httpApi:
+    cors: true
+
+plugins:
+  - serverless-offline
+
+functions:
+  api:
+    handler: handler.api
+    events:
+      - http:
+          path: api
+          method: post
+          cors: true
