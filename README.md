@@ -2,7 +2,7 @@
 
 ## Overview
 
-The `Buddy Offer-Only Demo` repository is small Node aplication to mock a back-end along with a small HTML/JS app to demonstrate how the Buddy Offer Element integrates in an shopping cart using our `Offer-Only` mode.
+The Buddy Offer-Only Demo is a Node app to mock a back-end with an HTML/JS app to demo the Buddy Offer Element integrated into a shopping cart using our Offer-Only mode.
 
 ## Projects Included
 
