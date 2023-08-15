@@ -1,7 +1,7 @@
 # Partner Server
 
 ## Overview
-Partner Server acts as a mock downstream distributor's partner server, specifically designed for internal developers and demo purposes. It's built with JavaScript using Node.js and is designed to run as a Lambda function.
+Partner Server acts as a mock downstream distributor's partner server. This server demonstrates how you can receive a payload from the cart and split the Stripe transaction between multiple connected accounts. It's built with JavaScript using Node.js and is designed to run as a Lambda function.
 
 ## Prerequisites
 
